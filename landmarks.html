@@ -13,14 +13,14 @@
 <div id="top-bar">&nbsp; </div>
 <div class="page_wrapper">
 
-<div id="header">
+<div id="header" role="banner">
 	<div id="course_title_container" style="left:1em;">		
 	    <h1 id="section-title">Our Community Website</h1>
 	</div>
 </div>
 
 <div class="" style="z-index: auto; position: static; top: auto;" id="lrg_topnav">
-    <div style="width: 100%;" id="topnavlistcontainer" aria-label="main navigation tabs">
+    <div style="width: 100%;" id="topnavlistcontainer" aria-label="main" role="navigation">
         <a name="main-nav" id="main-nav"></a>
         <ul style="" id="topnavlist">
         <li><a href="index.html" accesskey="1" title="Back to Index Alt+1">Back to Index</a></li>
@@ -33,19 +33,19 @@
     </div> 
 </div>
 
-<div class="logoutbar">&nbsp; <input type="text" class="input"><input type="submit" value="search"></div>
-<div class="crumbcontainer">
+<div class="logoutbar" role="search">&nbsp; <input type="text" class="input"><input type="submit" value="search"></div>
+<div class="crumbcontainer" role="navigation" aria-label="breadcrumbs">
 		<div id="breadcrumbs" tabindex="0" aria-label="breadcrumb links">&nbsp;</div>
 </div>
 <div id="contentwrapper">
     <div id="lrg_content">
-		<div id="leftcolumn">
+		<div id="leftcolumn" role="complementary" aria-label="sidebar">
 		  <a id="menu"></a>
 		     <div id="side-menu" aria-label="left side menu" accesskey="0">
 		        <br/>
-                <h2 class="box"><span>Networking</span></h2>
-                <div class="box" id="menu_Networking">
-                    <ul class="social_side_menu">
+                <h2 class="box" id="networking-title"><span>Networking</span></h2>
+                <div class="box" id="menu_Networking" role="navigation" aria-labelledby="networking-title">
+                    <ul class="social_side_menu" >
                         <li><a href="" class="fake">My Network</a></li>
                         <li><a href="" class="fake">My Contacts</a></li>
                         <li><a href="" class="fake">Network Profile</a></li>
@@ -56,8 +56,8 @@
                     <div class="divider"></div>
                 </div>
 			<br/>
-                <h2 class="box"><span>People Online</span></h2>
-                <div class="box" id="menu_UsersOnline">
+                <h2 class="box" id="usersonline-title"><span>People Online</span></h2>
+                <div class="box" id="menu_UsersOnline" aria-labelledby="usersonline-title">
                     <ul style="padding: 0px; list-style: none;">
                         <li style="padding: 3px 0px;" id="mylogin">No one logged in</li>
                     </ul>
@@ -72,7 +72,7 @@
 	<br style="clear:both;">
 	<a id="top"></a>
 
-<div class="profile">
+<div class="profile" role="main">
 <h2>Join our community</h2>
 <div id="feedback">&nbsp;</div>
 <form id="join_form">
@@ -215,7 +215,8 @@
 		<br style="width:100%;clear:both;" />
 
 	</div>
-<div id="advertising">
+
+<div id="advertising" role="complementary">
 <h2>Advertising</h2>
 <div>
 <img src="images/rum_cover.jpg" alt="" />
@@ -229,7 +230,7 @@
 <p><br><br>&nbsp;</p>
 </div>
 
-<div id="footer"> Copyright &copy; <a href="" class="fake">Chang School.</a>
+<div id="footer" role="contentinfo"> Copyright &copy; <a href="" class="fake">Chang School.</a>
 </div>
 
 </body>
