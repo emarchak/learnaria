@@ -96,7 +96,7 @@
 					.on('click', {'plugin': plugin, 'slide': i}, plugin.gotoSlide)
 					.appendTo($navbar);
 			});
-		
+
 		plugin.navbuttons = $navbar.children('li');
 		plugin.slides.first().addClass('active');
 		plugin.navbuttons.first().addClass('active');
