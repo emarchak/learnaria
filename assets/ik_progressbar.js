@@ -77,8 +77,8 @@
 	Plugin.prototype.getValue = function() {
 		
 		var value;
-		
-		value = Number( this.element.data('value') ); // inaccessible
+
+    value = Number( this.element.attr('aria-valuenow') ); // accessible
 		
 		return parseInt( value );
 		
@@ -119,10 +119,9 @@
 		}
 		
 		this.element
-			.data({ // inaccessible
-				'value': parseInt(val) 
-			}) 
-      ;
+      .attr({ // accessible
+        'aria-valuenow': val
+      });
 		
 		this.updateDisplay();
 		
@@ -152,6 +151,21 @@
 		this.notify();
 	
 	};
+
+  /** Handles kedown event on progressbar element. */
+  Plugin.prototype.onKeyDown = function(event) {
+
+    switch(event.keyCode) {
+
+      case ik_utils.keys.space:
+      case ik_utils.keys.enter:
+        event.preventDefault();
+        event.stopPropagation();
+        event.data.plugin.notify();
+        break;
+    }
+
+  };
 	
 	$.fn[pluginName] = function ( options ) {
 		
